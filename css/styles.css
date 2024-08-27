@@ -1,0 +1,499 @@
+/* Semua CSS Dibuat Oleh MUH. ASHARI RASYID dengan stresnya
+   didepan laptop hampir berjam-jam otak atik css */
+
+/*--------------------------
+        Main UTAMA
+--------------------------*/
+
+/* Kode Warna */
+:root {
+    --background-color: #fafafa;
+    --primary-color: #FFD700;
+    --secondary-color: #DAA520;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 10%;
+    margin-left: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color); /* Fixed background-color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+/* Navbar Menu Toggle Styles */
+.navbar-toggle {
+    display: block;
+    font-size: 24px;
+    z-index: 10; /* Pastikan toggle button ada di atas */
+}
+
+nav.active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Sesuaikan dengan tinggi navbar */
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.navbar-toggle {
+    display: none; /* Default hidden untuk desktop */
+}
+
+main {
+    padding: 20px;
+}
+
+/*--------------------------
+        Hero Section
+--------------------------*/
+.hero {
+    scroll-margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+    text-align: left;
+    max-width: 90%;
+    /* Menyesuaikan padding dan width pada tampilan mobile */
+}
+
+
+/*--------------------------
+     Profile Section
+--------------------------*/
+.profile {
+    scroll-margin-top: 160px;
+    margin-top: 70px;
+    margin-bottom: 80px;
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 70px;
+}
+
+.profile-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+
+}
+
+.profile-image img {
+    max-width: 300px;
+    border-radius: 10px;
+    display: block;
+}
+
+.profile-details {
+    max-width: 600px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+/*--------------------------
+    Fasilitas Section
+--------------------------*/
+.facilitation {
+    scroll-margin-top: 160px;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.facilitation h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 70px;
+}
+
+.facilitation h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.facilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.facility {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+    font-size: 36px;
+}
+
+/*--------------------------
+    Achievement Section
+--------------------------*/
+.achievements {
+    scroll-margin-top: 120px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.achievements h1 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 70px;
+    color: #333;
+}
+
+.achievements h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.achievement-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 100px;
+    padding-top: 40px;
+}
+
+.card {
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------------
+     Contact Section
+--------------------------*/
+
+.message-us {
+    padding: 50px;
+    background-color: var(--background-color);
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.message-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+
+.message-us form input[type="text"],
+.message-us form input[type="date"],
+.message-us form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message-us form .gender-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message-us form .gender-section label {
+    margin-right: 10px;
+}
+
+.message-us form .gender-section input[type="radio"] {
+    margin-right: 5px;
+}
+
+.message-us form textarea {
+    resize: vertical;
+}
+
+.message-us form button {
+    margin-left: 15px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: rgb(76, 76, 76);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-us form button:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.output {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 500px;
+}
+
+/*--------------------------
+    Footer Section
+--------------------------*/
+footer {
+    text-align: right;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/*--------------------------
+   Responsive Media Query
+--------------------------*/
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 20%;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    nav {
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav.active ul {
+        margin-top: 40px;
+        display: flex;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
+
+    .hero-image img {
+        height: auto;
+        max-width: 100%;
+        margin-top: 80px;
+    }
+
+    .welcome-text {
+        color: #333;
+        position: static;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .message-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .message-us form,
+    .output {
+        width: 100%;
+    }
+}

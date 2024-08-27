@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO By MUH. ASHARI RASYID -->
+    <meta name="description" content="Welcome to RevoU Project by MUH. ASHARI RASYID" />
+    <meta name="keywords" content="RevoU, MUH. ASHARI RASYID, Final Project SEFC RevoU, SEFC RevoU" />
+
+    <title>RevoU</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logo.png" />
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- ikon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<!-- Website Created by MUH. ASHARI RASYID -->
+<!-- Ciee ketahuan cek Inspect Codingan -->
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <div class="navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#profile">What is RevoU</a></li>
+                <li><a href="#facilitator">Facilities</a></li>
+                <li><a href="#achievement">Achievement</a></li>
+                <li><a href="#contact">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-image">
+                <img src="Img/banner.jpg" alt="Hero Image">
+            </div>
+            <div class="welcome-text">
+                <h1>Hi <span id="outputNameBanner">MUH. ASHARI RASYID</span>,
+                    Welcome To <span style="color: #FFD700;">RevoU</span></h1>
+                <p>Ini adalah Website Final Project</p>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="profile">
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="Img/logo.png" alt="Profile Image">
+                </div>
+                <div class="profile-details">
+                    <h2>What is RevoU?</h2>
+                    <p>RevoU adalah sebuah platform pendidikan yang menyediakan berbagai kursus dan program pelatihan, terutama dalam bidang teknologi, digital marketing, dan pengembangan karier. Mereka menawarkan pelatihan intensif yang dirancang untuk mempersiapkan peserta untuk memasuki industri yang relevan dengan keterampilan praktis dan pengetahuan terbaru. Program-program ini sering kali termasuk mentor berpengalaman, proyek praktis, dan bimbingan untuk membantu peserta mendapatkan keterampilan yang dibutuhkan untuk sukses di pasar kerja.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="facilitator" class="facilitation">
+            <h2>Our Facilitation</h2>
+            <div class="facilities">
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <p>Online Classes</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <p>Mentoring Sessions</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <p>Community Access</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <p>Learning Materials</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p>Real Projects</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <p>Career Guidance</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <p>Additional Resources</p>
+                </div>
+                <div class="facility">
+                    <div class="icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <p>Alumni Network</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievement" class="achievements">
+            <h1>Achievements</h1>
+            <div class="achievement-content">
+                <div class="achievement-cards">
+                    <div class="card">
+                        <h3>8000+</h3>
+                        <p>Alumni RevoU</p>
+                    </div>
+                    <div class="card">
+                        <h3>800,000+</h3>
+                        <p>Anggota Komunitas Keseluruhan Mini Course</p>
+                    </div>
+                    <div class="card">
+                        <h3>Penggemar Teratas</h3>
+                        <p>Sekolah di Indonesia</p>
+                    </div>
+                    <div class="card">
+                        <h3>Penghargaan Terbaik</h3>
+                        <p>Inovasi dalam Pendidikan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="message-us">
+            <h2>Message Us</h2>
+            <div class="message-container">
+                <form id="messageForm" onsubmit="return validateForm()">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="dob">Tanggal Lahir:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <div class="gender-section">
+                        <label>Jenis Kelamin:</label>
+                        <input type="radio" id="male" name="gender" value="Laki-Laki" required> Laki-Laki
+                        <input type="radio" id="female" name="gender" value="Perempuan" required> Perempuan
+                    </div>
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div class="output">
+                    <h4>Tampilan Validasi Form</h4>
+                    <p>Current time: <span id="currentTime"></span> (<span id="currentTimezone"></span>)</p>
+                    <p>Nama: <span id="outputName">MUH. ASHARI RASYID</span></p>
+                    <p>Tanggal Lahir: <span id="outputDob">13/09/2004</span></p>
+                    <p>Jenis Kelamin: <span id="outputGender">Laki-Laki</span></p>
+                    <p>Pesan: <span id="outputMessage">Lagi Belajar buat Website</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Mini Project <span style="color: #DAA520;">SEFC RevoU</span> August 19, 2024
+            | Created By <a href="https://linktr.ee/ardcreator" target="_blank">MUH. ASHARI RASYID</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
