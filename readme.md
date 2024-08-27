@@ -5,7 +5,7 @@
 ## Data Diri
 
 - Nama : MUH. ASHARI RASYID
-- Domisi : Kota Palu, Sulawesi Tengah
+- Domisili : Kota Palu, Sulawesi Tengah
 - Asal Univ : Universitas Tadulako
 - Program Studi : Sistem Informasi
 
